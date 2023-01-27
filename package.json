@@ -1,40 +1,46 @@
 {
-	"name": "cusucceed",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"react": "18",
-		"react-dom": "18",
-		"react-hot-toast": "^2.2.0",
-		"react-parallax-tilt": "^1.7.76",
-		"react-router-dom": "^6.4.4",
-		"react-scripts": "^5.0.1",
-		"web-vitals": "^2.1.4"
-	},
-	"scripts": {
-		"add": "git status && git add .",
-		"commit": "git status && git commit -m 'deploy'",
-		"push": "git status && git push origin master",
-		"git": "pnpm run add && pnpm run commit && pnpm run push",
-		"init": "ln -s ~/../lib/node_modules .",
-		"start": "react-scripts start",
-		"build": "react-scripts build"
-	},
-	"eslintConfig": {
-		"extends": [
-			"react-app"
-		]
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	}
+  "homepage": "https://ShivaShirsath.github.io/cuSucceed",
+  "name": "cusucceed",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "18",
+    "react-dom": "18",
+    "react-hot-toast": "^2.2.0",
+    "react-parallax-tilt": "^1.7.76",
+    "react-router-dom": "^6.4.4",
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "add": "git status && git add .",
+    "commit": "git status && git commit -m 'deploy'",
+    "push": "git status && git push origin master",
+    "git": "pnpm run add && pnpm run commit && pnpm run push",
+    "init": "ln -s ~/../lib/node_modules .",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
