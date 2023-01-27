@@ -17,7 +17,7 @@ jobs:
           npm i -g pnpm@latest
           pnpm setup
           pnpm i
-          pnpm run build
+          CI=false pnpm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
