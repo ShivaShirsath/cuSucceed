@@ -38,9 +38,10 @@ function App() {
         </ul>
       </nav>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/xyz" element={<>xyz</>} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/cuSucceed/" element={<Home />} />
+        <Route path="/cuSucceed/xyz" element={<>xyz</>} />
+        <Route path="/cuSucceed/*" element={<Navigate to="/cuSucceed" />} />
+        <Route path="*" element={<Navigate to="/cuSucceed" />} />
       </Routes>
       <footer></footer>
     </>
