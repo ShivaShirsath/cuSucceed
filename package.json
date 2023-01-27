@@ -1,34 +1,24 @@
 {
-	"homepage": "https://smart-ide.web.app",
-	"name": "smart-ide",
+	"name": "cusucceed",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"codemirror": "^5.65.2",
-		"express": "^4.17.3",
-		"firebase": "^9.15.0",
 		"react": "18",
 		"react-dom": "18",
 		"react-hot-toast": "^2.2.0",
 		"react-parallax-tilt": "^1.7.76",
 		"react-router-dom": "^6.4.4",
 		"react-scripts": "^5.0.1",
-		"react-speech-kit": "^3.0.1",
-		"react-speech-recognition": "^3.10.0",
-		"socket.io": "^4.5.4",
-		"socket.io-client": "^4.5.4",
-		"uuid": "^8.3.2",
 		"web-vitals": "^2.1.4"
 	},
 	"scripts": {
-                "push": "git add . && git commit -m 'deploy' && git push origin master",
-		"init": "npm run link",
-		"link": "ln -s ~/../lib/node_modules .",
-		"front": "react-scripts start",
-		"start": "npm run build && npm run server",
-		"build": "CI=false react-scripts build",
-		"dev": "nodemon index.js",
-		"server": "node index.js"
+		"add": "git status && git add .",
+		"commit": "git status && git commit -m 'deploy'",
+		"push": "git status && git push origin master",
+		"git": "pnpm run add && pnpm run commit && pnpm run push",
+		"init": "ln -s ~/../lib/node_modules .",
+		"start": "react-scripts start",
+		"build": "react-scripts build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -46,8 +36,5 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
-	},
-	"devDependencies": {
-		"nodemon": "^2.0.20"
 	}
 }

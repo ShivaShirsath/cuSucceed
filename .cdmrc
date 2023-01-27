@@ -1,5 +1,7 @@
 tabs: ['src/App.js']
 live-reload-browser: false
 terminal-one: |
-    npm install
-    npm run init
+    npm i -g pnpm@latest
+    pnpm setup
+    pnpm install
+    pnpm run init
