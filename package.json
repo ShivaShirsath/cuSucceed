@@ -1,46 +1,72 @@
 {
-  "homepage": "https://ShivaShirsath.github.io/cuSucceed",
-  "name": "cusucceed",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "18",
-    "react-dom": "18",
-    "react-hot-toast": "^2.2.0",
-    "react-parallax-tilt": "^1.7.76",
-    "react-router-dom": "^6.4.4",
-    "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4"
+  "name": "cu-succeed",
+  "version": "1.1.1",
+  "description": "CU Succeed",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShivaShirsath/cuSucceed.git"
   },
+  "keywords": [
+    "react",
+    "reactjs",
+    "design",
+    "design-react",
+    "kit",
+    "react-kit",
+    "cuSucceed",
+    "design-system-react"
+  ],
+  "author": "Creative Tim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ShivaShirsath/cuSucceed/issues"
+  },
+  "homepage": "https://ShivaShirsath.github.io/cuSucceed",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "add": "git status && git add .",
-    "commit": "git status && git commit -m 'deploy'",
-    "push": "git status && git push origin master",
-    "git": "pnpm run add && pnpm run commit && pnpm run push",
-    "init": "ln -s ~/../lib/node_modules .",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build && gulp licenses",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "compile-sass": "sass src/assets/scss/cuSucceed.scss src/assets/css/cuSucceed.css",
+    "minify-sass": "sass src/assets/scss/cuSucceed.scss src/assets/css/cuSucceed.min.css --style compressed"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
+    "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "classnames": "2.3.1",
+    "headroom.js": "0.12.0",
+    "moment": "2.29.4",
+    "nouislider": "14.1.1",
+    "react": "18.2.0",
+    "react-datetime": "3.1.1",
+    "react-dom": "18.2.0",
+    "react-router-dom": "5.1.2",
+    "react-scripts": "5.0.1",
+    "reactstrap": "8.4.1",
+    "sass": "1.53.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "@types/googlemaps": "3.39.2",
+    "@types/markerclustererplus": "2.1.33",
+    "@types/react": "18.0.17",
+    "eslint-plugin-flowtype": "8.0.3",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.9",
+    "jquery": "3.6.0",
+    "typescript": "4.7.4"
   }
 }
