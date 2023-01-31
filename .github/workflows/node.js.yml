@@ -14,8 +14,8 @@ jobs:
 
       - name: Install and Build 🔧 
         run: |
-          npm i
-          npm install --legacy-peer-deps react-datetime
+          npm i --force
+          npm install --force --legacy-peer-deps react-datetime
           npm run build
 
       - name: Deploy 🚀
