@@ -4,10 +4,10 @@
     "cpus": 4
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "npm install",
+  "updateContentCommand": "npm i -g pnpm@latest && pnpm setup && pnpm setup && pnpm install",
   "postCreateCommand": "",
   "postAttachCommand": {
-    "server": "npm start"
+    "server": "pnpm start"
   },
   "customizations": {
     "codespaces": {
